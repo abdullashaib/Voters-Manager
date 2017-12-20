@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Voters Manager
  * Plugin URI:        http://www.abdullashaib.com/VotersManager
- * Description:       This plugin is a complete web application used to manage voters registration in Zanzibar. 
+ * Description:       This plugin is a complete web application used to manage voters registration in Zanzibar. The plugin is 99% independent, that means can be installed to another system without causing any problem. There are number of pages are created during activation as well as database tables. 
  * Version:           1.0.0
  * Author:            Abdulla Shaib
  * Author URI:        http://www.abdullashaib.com
