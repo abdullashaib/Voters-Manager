@@ -31,8 +31,14 @@ class Wp_voters_manager_Deactivator {
 	 */
 	public static function deactivate() {
 	
-	   //require_once plugin_dir_path( __FILE__ ) . 'plugin_delete_tables.php';
-	   //delete_tables();
+	// include for delete operations
+	   require_once plugin_dir_path( __FILE__ ) . 'plugin_delete_tables.php';
+	   
+	   // This function delete tables
+	   delete_tables();
+	   
+	   // This function delete pages and postmeta
+	   delete_pages_postmeta();
 
 	}
 

@@ -33,10 +33,17 @@ class Wp_voters_manager_Activator {
 	
 	   require_once plugin_dir_path( __FILE__ ) . 'plugin_table_creation.php';
 	   
-	   //create_db_tables();
+	   /*
+	    * This function call is for creating database tables
+	    */	    
+	   create_db_tables();
+	   
+	   /*
+	    *  This function call is for creating pages and updating postmeta for custom template
+	    */
 	   create_pages();
 	   
-	   //require_once plugin_dir_path( __FILE__ ) . 'plugin_page_creation.php';
+	   
 	   
 
 	}

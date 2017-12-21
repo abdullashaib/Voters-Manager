@@ -38,4 +38,26 @@ function delete_tables() {
   
 }
 
+
+/*
+ *  This function will be used to delete all pages created during plugin activation. It will also 
+ *  delete all postmeta from postmeta table for those page that has custom template to display 
+ */ 
+function delete_pages_postmeta() {
+
+  global $wpdb;
+  
+  $pages = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "plugin_pages");
+  
+  foreach ( $pages as $page ) 	{           
+     $page_title = get_page_by_title($page->title);    
+     // delete page permanently
+     wp_delete_post($page_title->ID, true) ; 
+     
+     // Delete postmeta
+     delete_post_meta($page_title->ID, '_wp_page_template', $page->template);        
+  }
+
+}
+
 ?>
