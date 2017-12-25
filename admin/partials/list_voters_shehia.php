@@ -302,7 +302,7 @@ $(document).ready(function () {
   }
 
 
-
+delete_pages_postmeta();
 
   
 }
